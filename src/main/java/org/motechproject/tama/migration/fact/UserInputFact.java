@@ -64,7 +64,7 @@ public class UserInputFact {
         this.nextEventId = nextEvent.getCallEventId();
         this.response = buildXML(event.getData().getData().get("responseXML"));
         this.occurredAt = event.getTimeStamp().toDate();
-        this.duration = valueOf(new Period(newDateTime(previousEvent.getOccurredAt()), event.getTimeStamp(), PeriodType.seconds()).getMillis());
+        this.duration = valueOf(new Period(newDateTime(previousEvent.getOccurredAt()), event.getTimeStamp(), PeriodType.millis()).getMillis());
     }
 
     private String returnFirst(List<String> treeNames) {
