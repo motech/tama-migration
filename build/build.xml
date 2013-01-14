@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="tama-migration" basedir=".">
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+
+    <taskdef name="for" classname="net.sf.antcontrib.logic.ForTask">
+        <classpath>
+            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+
+    <property file="${basedir}\build.properties"/>
+    <property file="${basedir}\maven.properties"/>
+
+    <target name="drop.all.dbs">
+    </target>
+</project>
+
