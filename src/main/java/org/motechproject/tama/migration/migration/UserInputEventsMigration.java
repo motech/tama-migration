@@ -39,8 +39,8 @@ public class UserInputEventsMigration extends Migration<CallLog> {
         for (int i = 1; i < callEvents.size() - 1; i++) {
             CallEvent event = callEvents.get(i);
             if ("GotDTMF".equals(event.getName())) {
-                SimpleCallEventFact previousEvent = createFact(document, event, i - 1);
-                SimpleCallEventFact nextEvent = createFact(document, event, i + 1);
+                SimpleCallEventFact previousEvent = createFact(document, callEvents.get(i - 1), i - 1);
+                SimpleCallEventFact nextEvent = createFact(document, callEvents.get(i + 1), i + 1);
                 allUserInputEvents.save(createFact(document, event, i, previousEvent, nextEvent));
             }
         }
