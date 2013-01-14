@@ -112,6 +112,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Motech -->
+            <dependency>
+                <groupId>org.motechproject</groupId>
+                <artifactId>motech-deliverytools-common</artifactId>
+                <version>${motech.delivery.version}</version>
+            </dependency>
             <!-- TAMA -->
             <dependency>
                 <groupId>org.motechproject.tama</groupId>
@@ -294,6 +300,11 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- Motech -->
+        <dependency>
+            <groupId>org.motechproject</groupId>
+            <artifactId>motech-deliverytools-common</artifactId>
+        </dependency>
         <!-- TAMA -->
         <dependency>
             <groupId>org.motechproject.tama</groupId>
