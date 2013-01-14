@@ -4,8 +4,8 @@ create table tama_reports.call_log (
     call_direction varchar(20),
     call_language varchar(10),
     clinic_id varchar(100),
-    start_time date,
-    end_time date,
+    start_time timestamp,
+    end_time timestamp,
     phone_number varchar(50)
 );
 
