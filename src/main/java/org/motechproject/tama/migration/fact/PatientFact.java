@@ -18,6 +18,9 @@ public class PatientFact {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "patient_doc_id")
+    private String patientDocumentId;
+
     @Column(name = "patient_id")
     private String patientId;
 
@@ -43,6 +46,7 @@ public class PatientFact {
     }
 
     public PatientFact(Patient patient) {
+        patientDocumentId = patient.getId();
         patientId = patient.getPatientId();
         clinicId = patient.getClinic_id();
         status = patient.getStatus().getDisplayName();
