@@ -24,6 +24,9 @@ public class SimpleCallEventFact {
     @Column(name = "call_event_id")
     private String callEventId;
 
+    @Column(name = "call_start_time")
+    private Date callStartTime;
+
     @Column(name = "call_id")
     private String callId;
 
@@ -43,9 +46,10 @@ public class SimpleCallEventFact {
 
     }
 
-    public SimpleCallEventFact(String name, String callId, int occurrenceInCall, CallEvent callEvent) {
+    public SimpleCallEventFact(String name, String callId, Date callStartTime, int occurrenceInCall, CallEvent callEvent) {
         this.name = name;
         this.callId = callId;
+        this.callStartTime = callStartTime;
         this.callEventId = callId + "/event/" + Integer.toString(occurrenceInCall);
         this.response = buildResponse(callEvent.getData().getData().get("responseXML"));
         this.occurredAt = callEvent.getTimeStamp().toDate();

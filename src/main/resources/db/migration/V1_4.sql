@@ -5,6 +5,7 @@ create table tama_reports.simple_call_event (
     call_id varchar(100),
     previous_event_id varchar(100),
     next_event_id varchar(100),
+    call_start_time timestamp,
     response text,
     occurred_at timestamp
 );
