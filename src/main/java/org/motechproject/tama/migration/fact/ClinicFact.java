@@ -21,6 +21,9 @@ public class ClinicFact {
     @Column(name = "city_id")
     private String cityId;
 
+    @Column(name = "clinic_id")
+    private String clinicId;
+
     private String name;
 
     private String phone;
@@ -29,6 +32,7 @@ public class ClinicFact {
     }
 
     public ClinicFact(Clinic clinic) {
+        clinicId = clinic.getId();
         address = clinic.getAddress();
         cityId = clinic.getCityId();
         name = clinic.getName();

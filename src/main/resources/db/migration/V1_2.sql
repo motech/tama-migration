@@ -1,6 +1,7 @@
 create table tama_reports.clinic (
     id serial,
     address varchar(500),
+    clinic_id varchar(100),
     city_id varchar(100),
     name varchar(50),
     phone varchar(50)
