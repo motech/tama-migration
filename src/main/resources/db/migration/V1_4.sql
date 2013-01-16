@@ -3,6 +3,7 @@ create table tama_reports.simple_call_event (
     name varchar(10),
     call_event_id varchar(100),
     mobile_number varchar(100),
+    call_log_id varchar(100),
     call_id varchar(100),
     previous_event_id varchar(100),
     next_event_id varchar(100),

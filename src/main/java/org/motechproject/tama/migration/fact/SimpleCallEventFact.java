@@ -42,6 +42,9 @@ public class SimpleCallEventFact {
     @Column(name = "response")
     private String response;
 
+    @Column(name = "call_log_id")
+    private String callLogId;
+
     @Column(name = "occurred_at")
     private Date occurredAt;
 
@@ -49,8 +52,9 @@ public class SimpleCallEventFact {
 
     }
 
-    public SimpleCallEventFact(String name, String mobileNumber, String callId, Date callStartTime, int occurrenceInCall, CallEvent callEvent) {
+    public SimpleCallEventFact(String name, String callLogId, String mobileNumber, String callId, Date callStartTime, int occurrenceInCall, CallEvent callEvent) {
         this.name = name;
+        this.callLogId = callLogId;
         this.mobileNumber = mobileNumber;
         this.callId = callId;
         this.callStartTime = callStartTime;
