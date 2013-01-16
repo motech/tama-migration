@@ -47,7 +47,7 @@ public class UserInputEventsMigration extends Migration<CallLog> {
     }
 
     private SimpleCallEventFact createFact(CallLog document, CallEvent event, int i) {
-        return new SimpleCallEventFact(event.getName(), document.getCallId(), document.getStartTime().toDate(), i, event);
+        return new SimpleCallEventFact(event.getName(), document.getPhoneNumber(), document.getCallId(), document.getStartTime().toDate(), i, event);
     }
 
     private UserInputFact createFact(CallLog document, CallEvent event, int i, SimpleCallEventFact previousEvent, SimpleCallEventFact nextEvent) {

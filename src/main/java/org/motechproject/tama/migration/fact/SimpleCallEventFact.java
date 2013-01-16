@@ -21,6 +21,9 @@ public class SimpleCallEventFact {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "mobile_number")
+    private String mobileNumber;
+
     @Column(name = "call_event_id")
     private String callEventId;
 
@@ -46,8 +49,9 @@ public class SimpleCallEventFact {
 
     }
 
-    public SimpleCallEventFact(String name, String callId, Date callStartTime, int occurrenceInCall, CallEvent callEvent) {
+    public SimpleCallEventFact(String name, String mobileNumber, String callId, Date callStartTime, int occurrenceInCall, CallEvent callEvent) {
         this.name = name;
+        this.mobileNumber = mobileNumber;
         this.callId = callId;
         this.callStartTime = callStartTime;
         this.callEventId = callId + "/event/" + Integer.toString(occurrenceInCall);
