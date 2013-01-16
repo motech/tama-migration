@@ -17,6 +17,9 @@ public class CallLogFact {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "call_doc_id")
+    private String callDocId;
+
     @Column(name = "call_id")
     private String callId;
 
@@ -43,6 +46,7 @@ public class CallLogFact {
 
     public CallLogFact(CallLog callLog) {
         callId = callLog.getCallId();
+        this.callDocId = callLog.getId();
         callDirection = callLog.getCallDirection().name();
         language = callLog.callLanguage();
         clinicId = callLog.clinicId();
