@@ -17,6 +17,9 @@ public class CallLogFact {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "patient_doc_id")
+    private String patientId;
+
     @Column(name = "call_doc_id")
     private String callDocId;
 
@@ -52,6 +55,7 @@ public class CallLogFact {
         clinicId = callLog.clinicId();
         startTime = date(callLog.getStartTime());
         endTime = date(callLog.getEndTime());
+        patientId = callLog.getPatientDocumentId();
         phoneNumber = callLog.getPhoneNumber();
     }
 

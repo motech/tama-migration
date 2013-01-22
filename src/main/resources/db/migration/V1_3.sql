@@ -1,5 +1,6 @@
 create table tama_reports.call_log (
     id serial,
+    patient_doc_id varchar(100),
     call_doc_id varchar(100),
     call_id varchar(100),
     call_direction varchar(20),
